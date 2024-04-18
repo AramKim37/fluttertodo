@@ -20,6 +20,22 @@ class _CounterPageState extends State<CounterPage> {
     });
   }
 
+  void decrement() {
+    setState(() {
+      if (counter < 1) {
+        counter = 0;
+      } else {
+        counter--;
+      }
+    });
+  }
+
+  void reset() {
+    setState(() {
+      counter = 0;
+    });
+  }
+
 //UI
   @override
   Widget build(BuildContext context) {
@@ -37,10 +53,35 @@ class _CounterPageState extends State<CounterPage> {
               counter.toString(),
               style: TextStyle(fontSize: 40, color: Colors.white),
             ),
-            ElevatedButton(
-              onPressed: increment,
-              child: Text("Increment"),
-            )
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: increment,
+                  child: Text("Increment"),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(120, 50), // 버튼 크기 설정
+                  ),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: decrement,
+                  child: Text("Decrement"),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(120, 50), // 버튼 크기 설정
+                  ),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: reset,
+                  child: Text("Reset"),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(120, 50), // 버튼 크기 설정
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
