@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:todoapp/test.dart';
 
 class CounterPage extends StatefulWidget {
   const CounterPage({super.key});
@@ -29,13 +28,13 @@ class _CounterPageState extends State<CounterPage> {
           builder: (BuildContext context) {
             return AlertDialog(
               // title: Text("The number can't be negative"),
-              content: Text("The number can't go below zero"),
+              content: const Text("The number can't go below zero"),
               actions: [
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("OK"),
+                  child: const Text("OK"),
                 ),
               ],
             );
@@ -99,7 +98,6 @@ class _CounterPageState extends State<CounterPage> {
                 ),
               ],
             ),
-            Test(),
           ],
         ),
       ),
