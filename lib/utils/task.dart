@@ -27,8 +27,19 @@ class Task extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Row(
             children: [
-              Checkbox(value: completed, onChanged: onChanged),
-              Text(taskName),
+              Checkbox(
+                value: completed,
+                onChanged: onChanged,
+                activeColor: Colors.black,
+              ),
+              Text(
+                taskName,
+                style: TextStyle(
+                  decoration: completed
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none,
+                ),
+              ),
             ],
           ),
         ),
