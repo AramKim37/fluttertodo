@@ -38,6 +38,7 @@ class Task extends StatelessWidget {
                   decoration: completed
                       ? TextDecoration.lineThrough
                       : TextDecoration.none,
+                  decorationColor: completed ? Colors.red : Colors.transparent,
                 ),
               ),
             ],
