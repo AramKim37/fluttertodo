@@ -7,8 +7,20 @@ class DialogBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: AlertDialog(),
-    );
+    return AlertDialog(
+        backgroundColor: Colors.yellow,
+        content: Container(
+          height: 120,
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Add your task",
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
