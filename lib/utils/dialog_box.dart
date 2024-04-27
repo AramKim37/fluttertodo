@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:todoapp/utils/my_button.dart';
 
 class DialogBox extends StatelessWidget {
   const DialogBox({super.key});
@@ -18,6 +19,18 @@ class DialogBox extends StatelessWidget {
                   border: OutlineInputBorder(),
                   hintText: "Add your task",
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //save button
+                  MyButton(text: "Save", onPressed: () {}),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  // cancel button
+                  MyButton(text: "Cancel", onPressed: () {})
+                ],
               )
             ],
           ),
