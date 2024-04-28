@@ -13,6 +13,7 @@ class DialogBox extends StatelessWidget {
         content: Container(
           height: 120,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextField(
                 decoration: InputDecoration(
