@@ -14,6 +14,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final _controller = TextEditingController();
 
+  void addNewTask() {
+    setState(() {
+      toDoList.add([_controller.text, false]);
+    });
+    Navigator.of(context).pop();
+  }
+
   //list of todo tasks
   List toDoList = [
     ['Aram Kim', true],
@@ -35,6 +42,8 @@ class _HomePageState extends State<HomePage> {
       builder: (context) {
         return DialogBox(
           controller: _controller,
+          onSave: addNewTask,
+          onCancel: () => Navigator.of(context).pop(),
         );
       },
     );
