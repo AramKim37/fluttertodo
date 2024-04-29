@@ -42,7 +42,10 @@ class DialogBox extends StatelessWidget {
                     width: 20,
                   ),
                   // cancel button
-                  MyButton(text: "Cancel", onPressed: () {})
+                  MyButton(
+                    text: "Cancel",
+                    onPressed: onCancel,
+                  )
                 ],
               )
             ],
