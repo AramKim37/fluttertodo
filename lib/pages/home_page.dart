@@ -18,10 +18,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    if (_myBox.get("TODOLIST") == "") {
-      print("hello");
+    if (_myBox.get("TODOLIST") == null) {
       db.createInitialData();
-      print("bye");
     } else {
       db.loadData();
     }
