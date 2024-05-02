@@ -37,7 +37,7 @@ class Task extends StatelessWidget {
         ),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.yellow,
+            color: Colors.grey[200],
             borderRadius: BorderRadius.circular(10),
           ),
           child: Padding(
