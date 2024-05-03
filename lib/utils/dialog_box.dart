@@ -25,10 +25,13 @@ class DialogBox extends StatelessWidget {
             children: [
               TextField(
                 controller: controller,
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "Add your task",
-                  focusColor: Colors.white,
+                  hintStyle: TextStyle(color: Colors.black26),
                 ),
               ),
               Row(
